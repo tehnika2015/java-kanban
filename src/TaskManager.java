@@ -24,6 +24,16 @@ public class TaskManager {
     }
 
     public void updateEpic(Epic epic) {
+        epicMap.put(epic.getId(), epic);
+ /*       //Виталий, я не понимаю нужна ли здесь эта процедура обновления списка id сабтасков привязанных к эпику,
+ если не нужна скажи, удалю. Мне кажется что не нужна, но на всякий случай закомментированной оставлю.
+        epic.setSubtaskIds(new ArrayList<>());
+        for (Subtask value : subTaskMap.values()) {
+            if (value.getEpicId() == epic.getId()) {
+                epic.getSubtaskIds().add(value.getEpicId());
+            }
+        }
+  */
         UpdateEpicStatus(epic);
     }
 
