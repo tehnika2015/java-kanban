@@ -1,3 +1,5 @@
+package source;
+
 import java.util.Objects;
 
 public class Task {
@@ -27,7 +29,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
+        return "source.Task{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +
@@ -63,9 +65,7 @@ public class Task {
         this.id = id;
     }
 
-    public void setStatus(StatusEnum status) {
+    public void setStatus(source.StatusEnum status) {
         this.status = status;
     }
-
-
 }
