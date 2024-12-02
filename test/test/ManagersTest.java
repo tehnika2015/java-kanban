@@ -18,8 +18,8 @@ class ManagersTest {
     }
 
     @Test
-    void mustCreateObject(){
-        TaskManager taskManager =  Managers.getDefault();
+    void mustCreateObject() {
+        TaskManager taskManager = Managers.getDefault();
         Assertions.assertNotNull(taskManager, "Создался нулевой объект");
     }
 }

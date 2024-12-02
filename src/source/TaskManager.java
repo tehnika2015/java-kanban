@@ -1,6 +1,7 @@
 package source;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface TaskManager {
     void addTask(Task task);
@@ -41,4 +42,5 @@ public interface TaskManager {
 
     ArrayList<Subtask> getEpicSubTaskById(int id);
 
+    List<Task> getHistory();
 }

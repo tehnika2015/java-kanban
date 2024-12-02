@@ -11,6 +11,7 @@ public class InMemoryHistoryManager implements HistoryManager {
     public void add(Task task) {  //должен помечать задачи как просмотренные
         if (taskViewHistory.size() >= 10) {
             taskViewHistory.removeFirst();
+            taskViewHistory.add(task);
         } else {
             taskViewHistory.add(task);
         }

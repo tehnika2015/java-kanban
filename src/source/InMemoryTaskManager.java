@@ -145,6 +145,7 @@ public class InMemoryTaskManager implements TaskManager {
         return listSubTask;
     }
 
+    @Override
     public List<Task> getHistory() {  //История просмотров задач
         return Managers.getDefaultHistory().getHistory();
     }
