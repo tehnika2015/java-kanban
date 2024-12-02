@@ -9,10 +9,11 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public void add(Task task) {  //должен помечать задачи как просмотренные
-        while (Managers.getDefaultHistory().getHistory().size() >= 10) {
-            Managers.getDefaultHistory().getHistory().removeFirst();
+        if (taskViewHistory.size() >= 10) {
+            taskViewHistory.removeFirst();
+        } else {
+            taskViewHistory.add(task);
         }
-        Managers.getDefaultHistory().getHistory().add(task);
     }
 
     @Override

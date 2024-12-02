@@ -2,6 +2,7 @@ package source;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class InMemoryTaskManager implements TaskManager {
     private HashMap<Integer, Task> taskMap = new HashMap<>();
@@ -142,6 +143,10 @@ public class InMemoryTaskManager implements TaskManager {
             }
         }
         return listSubTask;
+    }
+
+    public List<Task> getHistory() {  //История просмотров задач
+        return Managers.getDefaultHistory().getHistory();
     }
 
     private void UpdateEpicStatus(Epic epic) {
